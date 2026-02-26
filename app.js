@@ -11,7 +11,7 @@ const app = express()
 
 const allowedOrigins = [
   'http://localhost:5173',              
-//   'https://jobanalytic.netlify.app'      
+  'https://smartblogai.netlify.app'      
 ];
 
 app.use(cors({
