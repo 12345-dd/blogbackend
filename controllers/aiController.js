@@ -1,6 +1,8 @@
 const axios = require("axios");
 
 const getAISuggestions = async (req, res) => {
+     console.log("API KEY EXISTS:", !!process.env.API_KEY);
+  console.log("API KEY VALUE:", process.env.API_KEY);
   const { title, content } = req.body;
 
   if (!title && !content) {
@@ -42,7 +44,7 @@ const getAISuggestions = async (req, res) => {
         headers: {
           "Content-Type": "application/json",
         },
-        timeout: 10000,
+        timeout: 30000,
       }
     );
 
